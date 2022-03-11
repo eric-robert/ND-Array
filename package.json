@@ -1,0 +1,15 @@
+{
+  "name": "cubic-array",
+  "version": "1.0.1",
+  "description": "A lightweight n-dimentional array library",
+  "main": "dist/index.js",
+  "author": "eric-robert",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --declaration"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "types": "./dist/index.d.ts"
+}
