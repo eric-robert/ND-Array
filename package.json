@@ -11,5 +11,6 @@
   "devDependencies": {
     "typescript": "^4.6.2"
   },
-  "types": "./dist/index.d.ts"
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/eric-robert/ND-Array"
 }
