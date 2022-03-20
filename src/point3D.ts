@@ -36,6 +36,31 @@ export class Point3D {
         return new Point3D(this.x, this.y, this.z)
     }
 
+    fromArray ( arr : number[] ) {
+        this.x = arr[0]
+        this.y = arr[1]
+        this.z = arr[2]
+    }
+
+    fromObject (obj : {x : number, y : number, z : number}) {
+        this.x = obj.x
+        this.y = obj.y
+        this.z = obj.z
+    }
+
+    fromString ( str : string ) {
+        const arr = str.split(',')
+        this.x = parseInt(arr[0])
+        this.y = parseInt(arr[1])
+        this.z = parseInt(arr[2])
+    }
+
+    fromPoints (x : number, y : number, z : number) {
+        this.x = x
+        this.y = y
+        this.z = z
+    }
+
     // Edit Values
 
     multiply ( val : number ) {
