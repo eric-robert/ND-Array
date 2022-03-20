@@ -50,6 +50,12 @@ export class Point3D {
         this.z += val
     }
 
+    add_point ( vec : Point3D ) {
+        this.x += vec.x
+        this.y += vec.y
+        this.z += vec.z
+    }
+
     normalize ( val : number ) {
         this.multiply(val / Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z))
     }
@@ -86,6 +92,11 @@ export class Point3D {
     add_new ( val : number ) {
         return new Point3D(this.x + val, this.y + val, this.z + val)
     }
+
+    add_point_new ( point : Point3D ) {
+        return new Point3D(this.x + point.x, this.y + point.y, this.z + point.z)
+    }
+
 
     integerDivide_new ( val : number ){
         return new Point3D(Math.floor(this.x / val), Math.floor(this.y / val), Math.floor(this.z / val))
