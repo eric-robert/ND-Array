@@ -76,4 +76,28 @@ export class Point3D {
         this.z = this.z * (1 - t) + point.z * t
     }
 
+
+    // Edit new values
+
+    multiply_new ( val : number ) {
+        return new Point3D(this.x * val, this.y * val, this.z * val)
+    }
+
+    add_new ( val : number ) {
+        return new Point3D(this.x + val, this.y + val, this.z + val)
+    }
+
+    integerDivide_new ( val : number ){
+        return new Point3D(Math.floor(this.x / val), Math.floor(this.y / val), Math.floor(this.z / val))
+    }
+
+    modulus_new ( val : number ){
+        return new Point3D((this.x % val + val) % val, (this.y % val + val) % val, (this.z % val + val) % val)
+    }
+
+    average_with_new (point : Point3D, t : number ) {
+        return new Point3D(this.x * (1 - t) + point.x * t, this.y * (1 - t) + point.y * t, this.z * (1 - t) + point.z * t)
+    }
+
+
 }
