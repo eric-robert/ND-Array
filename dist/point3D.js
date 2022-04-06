@@ -36,6 +36,27 @@ class Point3D {
     toCopy() {
         return new Point3D(this.x, this.y, this.z);
     }
+    fromArray(arr) {
+        this.x = arr[0];
+        this.y = arr[1];
+        this.z = arr[2];
+    }
+    fromObject(obj) {
+        this.x = obj.x;
+        this.y = obj.y;
+        this.z = obj.z;
+    }
+    fromString(str) {
+        const arr = str.split(',');
+        this.x = parseInt(arr[0]);
+        this.y = parseInt(arr[1]);
+        this.z = parseInt(arr[2]);
+    }
+    fromPoints(x, y, z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
     // Edit Values
     multiply(val) {
         this.x *= val;
@@ -46,6 +67,11 @@ class Point3D {
         this.x += val;
         this.y += val;
         this.z += val;
+    }
+    add_point(vec) {
+        this.x += vec.x;
+        this.y += vec.y;
+        this.z += vec.z;
     }
     normalize(val) {
         this.multiply(val / Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z));
@@ -67,6 +93,25 @@ class Point3D {
         this.x = this.x * (1 - t) + point.x * t;
         this.y = this.y * (1 - t) + point.y * t;
         this.z = this.z * (1 - t) + point.z * t;
+    }
+    // Edit new values
+    multiply_new(val) {
+        return new Point3D(this.x * val, this.y * val, this.z * val);
+    }
+    add_new(val) {
+        return new Point3D(this.x + val, this.y + val, this.z + val);
+    }
+    add_point_new(point) {
+        return new Point3D(this.x + point.x, this.y + point.y, this.z + point.z);
+    }
+    integerDivide_new(val) {
+        return new Point3D(Math.floor(this.x / val), Math.floor(this.y / val), Math.floor(this.z / val));
+    }
+    modulus_new(val) {
+        return new Point3D((this.x % val + val) % val, (this.y % val + val) % val, (this.z % val + val) % val);
+    }
+    average_with_new(point, t) {
+        return new Point3D(this.x * (1 - t) + point.x * t, this.y * (1 - t) + point.y * t, this.z * (1 - t) + point.z * t);
     }
 }
 exports.Point3D = Point3D;
