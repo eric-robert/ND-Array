@@ -1,6 +1,6 @@
 {
   "name": "cubic-array",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A lightweight n-dimentional array library and a bunch of other stuff",
   "main": "dist/index.js",
   "author": "eric-robert",

@@ -1,5 +1,6 @@
 import { ArrayND } from "./arrayND";
 import { PossibleArrays, ArrayContructor } from "./arrayND.types";
+export * from './multi-map';
 export * from './arrayND';
 export * from './point3D';
 export declare class CubicArray<T extends PossibleArrays> extends ArrayND<T> {

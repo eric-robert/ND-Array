@@ -16,6 +16,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SquareArray = exports.CubicArray = void 0;
 const arrayND_1 = require("./arrayND");
+__exportStar(require("./multi-map"), exports);
 __exportStar(require("./arrayND"), exports);
 __exportStar(require("./point3D"), exports);
 class CubicArray extends arrayND_1.ArrayND {
